@@ -1,0 +1,249 @@
+@layer tailwind-base, primevue, tailwind-utilities;
+
+@layer tailwind-base {
+	@tailwind base;
+}
+
+@layer tailwind-utilities {
+	@tailwind components;
+	@tailwind utilities;
+}
+
+@layer base {
+	.p-splitbutton-dropdown {
+		@apply bg-primary-600
+	}
+}
+
+p {
+	@apply leading-relaxed
+}
+
+:root {
+	--p-message-content-gap: 1rem;
+}
+
+html.dark .light-only {
+	display: none !important;
+}
+
+html:not(.dark) .dark-only {
+	display: none !important;
+}
+
+.p-selectbutton.p-component {
+	@apply border border-zinc-200 dark:border-zinc-700
+}
+
+.p-togglebutton {
+	@apply bg-zinc-100 dark:bg-zinc-900
+}
+
+.p-drawer {
+	@apply rounded-t-2xl
+}
+
+.p-drawer-content {
+	@apply bg-zinc-50 py-5 dark:bg-zinc-950
+}
+
+.p-drawer-header {
+	@apply p-0 border-b border-zinc-200 dark:border-zinc-700;
+}
+
+.p-dialog-footer,
+.p-drawer-footer {
+	@apply p-0 border-t border-zinc-200 dark:border-zinc-700;
+}
+
+.p-drawer-header .p-drawer-title {
+	@apply text-xl;
+}
+
+.p-dialog {
+	@apply bg-zinc-50 mx-4;
+}
+
+.p-dialog-header {
+	@apply bg-white rounded-t-2xl p-0 border-b border-zinc-200 dark:border-zinc-700;
+}
+
+.p-dialog-header-actions {
+	@apply hidden
+}
+
+.p-dialog-content {
+	@apply py-5 dark:bg-zinc-950 rounded-b-xl
+}
+
+.p-fileupload {
+	@apply border-none;
+}
+
+.p-fileupload-header {
+	@apply px-0 pt-0;
+}
+
+.p-fileupload-content {
+	@apply px-0 pb-0;
+}
+
+.p-button:not(.p-button-icon-only) {
+	@apply gap-3
+}
+
+.p-button {
+	@apply !px-3
+}
+
+.btn-label:not(.p-button-icon-only) .p-button-label {
+	font-weight: var(--p-button-label-font-weight);
+	@apply hidden sm:block
+}
+
+.btn-label .p-button-icon {
+	@apply py-1 flex-1;
+}
+
+.p-button.b-outlined:disabled {
+	@apply bg-surface-100 opacity-100
+}
+
+.p-password-input {
+	@apply w-full
+}
+
+.p-select-header {
+	@apply px-2
+}
+
+.p-treetable-header,
+.p-datatable-header {
+	@apply dark:bg-zinc-900
+}
+
+.p-treetable-header-cell,
+.p-datatable-header-cell {
+	@apply uppercase text-sm font-bold !py-3
+}
+
+.p-treetable-thead .p-treetable-header-cell,
+.p-datatable-thead .p-datatable-header-cell {
+	@apply !bg-zinc-50 dark:!bg-zinc-800 dark:text-zinc-300 whitespace-nowrap
+}
+
+.p-treetable-tbody td,
+.p-datatable-tbody td {
+	@apply py-4
+}
+
+.p-treetable-tbody tr:last-of-type td,
+.p-datatable-tbody tr:last-of-type td {
+	@apply py-4 border-none
+}
+
+.p-treetable-tbody td:first-of-type,
+.p-treetable-thead th:first-of-type,
+.p-datatable-tbody td:first-of-type,
+.p-datatable-thead th:first-of-type {
+	@apply px-5
+}
+
+.p-treetable-tbody tr[aria-level="2"] {
+	@apply bg-zinc-50
+}
+
+.p-treetable-tbody tr[aria-level="2"] td:first-of-type {
+	@apply flex items-center py-7
+}
+
+.p-treetable-tbody tr[aria-level="2"] td:first-of-type::before {
+	content: '\21B3';
+	@apply ml-2 -mr-4
+}
+
+.p-treetable-footer,
+.p-datatable-footer {
+	@apply bg-transparent p-0
+}
+
+.p-tablist-tab-list, .p-tabpanels {
+	@apply bg-transparent;
+} 
+
+.p-menu-item-link {
+	@apply py-2.5 gap-4
+}
+
+.p-splitbutton-dropdown .p-button-icon {
+	@apply pr-0 mt-1
+}
+
+.p-steppanel-content {
+	@apply pb-4 pt-3
+}
+
+.p-stepitem {
+	@apply mb-2
+}
+
+.p-stepitem .p-stepper-separator {
+	@apply -left-2
+}
+
+.route-list:has(.route-child.active) .route-child .route-indecator {
+	@apply bg-surface-900 -translate-y-full;
+}
+
+.route-list:has(.route-child.active) .route-child.active ~ .route-child .route-indecator {
+	@apply bg-surface-300 dark:bg-surface-700 -translate-y-full -z-10
+}
+
+.route-list:has(.route-child.active) .route-child:not(.active) .route-indecator {
+	@apply bg-surface-900 dark:bg-surface-100 translate-y-0;
+}
+
+i::before,
+span::before {
+	@apply block place-self-center cursor-pointer;
+}
+
+input::placeholder {
+	@apply text-zinc-400 text-sm
+}
+
+.apexcharts-legend-text {
+	@apply dark:!text-zinc-300
+}
+
+.apexcharts-text tspan {
+	@apply dark:!text-zinc-300
+}
+
+.p-panel-header{
+	@apply dark:bg-zinc-800 rounded-md
+}
+
+.p-toast-message-content {
+	@apply gap-4
+}
+
+.p-toast-message-content svg {
+	@apply mt-1 mx-1
+}
+
+.p-toast-message {
+	@apply bg-white shadow border-zinc-200
+}
+
+.p-toast-message-text {
+	@apply gap-0.5
+}
+
+.p-toast-close-button {
+	@apply top-1.5 mr-2
+}
+
+.p-card-body {
+	@apply p-0
+}
