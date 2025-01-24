@@ -10,7 +10,7 @@
 			</Route>
 			
 			<Route :link="to('payment.index')" :active="current('payment.index')" icon="fi-rr-money-bill-wave">
-				{{ $t('Payments') }}
+				{{ $t('Paiements') }}
 			</Route>
 
 			<Route :link="to('vehicle.index')" :active="current('vehicle.index')" icon="fi-rr-car-side">
